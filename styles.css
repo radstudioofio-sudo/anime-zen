@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Quicksand:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f0f13;
+    color: white;
+    overflow-x: hidden; /* Evita scroll horizontal innecesario */
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff3e3e;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff3e3e;
+}
+
+/* Sección Hero corregida */
+.hero {
+    background: linear-gradient(rgba(15, 15, 19, 0.7), rgba(15, 15, 19, 0.9)), 
+                url('images/wallpaper.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.btn-download {
+    margin-top: 20px;
+    background-color: #ff3e3e;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(255, 62, 62, 0.4);
+}
+
+.btn-download:hover {
+    transform: scale(1.1);
+    background-color: #ff5e5e;
+    box-shadow: 0 0 30px rgba(255, 62, 62, 0.6);
+}
+
+/* Preview */
+.app-preview {
+    padding: 80px 10%;
+    background: #161625;
+}
+
+.preview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.phone-shape {
+    width: 280px;
+    height: 550px;
+    background: #333;
+    border: 8px solid #444;
+    border-radius: 35px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.phone-shape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 10%;
+    background: #0f0f13;
+}
+
+.feature-card {
+    background: #1a1a2e;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    flex: 1;
+    border: 1px solid #333;
+}
+
+/* Lista de Animes */
+.anime-list {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.grid-animes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.anime-card {
+    width: 220px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.anime-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.anime-card h4 {
+    margin-top: 15px;
+}
+
+.anime-card:hover {
+    transform: translateY(-15px) scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .preview-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .features {
+        flex-direction: column;
+    }
+}
