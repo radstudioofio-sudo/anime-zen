@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnimeVault - Tu Centro Anime</title>
+    <title>AnimeVault - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/eb496ab13c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -19,45 +20,55 @@
 
     <main>
         <section class="hero">
-            <h1>Tu Anime, Sin Límites</h1>
-            <p>Disfruta de tus series favoritas en alta calidad, sin anuncios y desde cualquier dispositivo.</p>
-            <a href="#catalogo" class="btn-download">Ver Catálogo</a>
-        </section>
-
-        <section class="app-preview">
-            <div class="preview-container">
-                <div class="text-content">
-                    <h2>Interfaz Intuitiva</h2>
-                    <p>Diseñada para que encuentres tu serie favorita en segundos. Soporte para modo oscuro y navegación fluida.</p>
-                </div>
-                <div class="phone-shape">
-    <img src="/images/Bleach.jpg" alt="Vista previa en móvil">
-</div>
-            </div>
+            <h1 class="neon-text">Tu Anime, Sin Límites</h1>
+            <p>La mejor experiencia de streaming personal.</p>
+            <a href="#catalogo" class="btn-download">Explorar Ahora</a>
         </section>
 
         <section id="catalogo" class="anime-list">
-            <h2>Animes Disponibles</h2>
+            <h2 class="section-title">Animes Disponibles</h2>
             <div class="grid-animes">
                 
                 <a href="ver.html" class="anime-link">
                     <div class="anime-card">
-                        <img src="images/Bleach.jpg" alt="Bleach">
-                        <h4>Bleach: TYBW</h4>
+                        <img src="/images/Bleach.jpg" alt="Bleach">
+                        <div class="card-overlay">
+                            <h4>Bleach: TYBW</h4>
+                            <span>HD | Sub Español</span>
+                        </div>
                     </div>
                 </a>
 
-                <div class="anime-card">
-                    <img src="images/anime1.jpg" alt="Anime 1">
-                    <h4>Próximamente</h4>
+                <div class="anime-card inactive">
+                    <img src="/images/FireForce.jpg" alt="Próximamente">
+                    <div class="card-overlay">
+                        <h4>Próximamente</h4>
+                        <span>Muy pronto</span>
+                    </div>
                 </div>
+
+                <div class="anime-card inactive"><img src="/images/Monogatari.jpg" alt="1"><h4>Espacio 3</h4></div>
+                <div class="anime-card inactive"><img src="/images/anime1.jpg" alt="1"><h4>Espacio 4</h4></div>
+                <div class="anime-card inactive"><img src="/images/anime1.jpg" alt="1"><h4>Espacio 5</h4></div>
+                <div class="anime-card inactive"><img src="/images/anime1.jpg" alt="1"><h4>Espacio 6</h4></div>
+                <div class="anime-card inactive"><img src="/images/anime1.jpg" alt="1"><h4>Espacio 7</h4></div>
+                <div class="anime-card inactive"><img src="/images/anime1.jpg" alt="1"><h4>Espacio 8</h4></div>
 
             </div>
         </section>
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: #555;">
-        <p>&copy; 2026 AnimeVault - Hecho con pasión por el anime</p>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h3>Anime<span>Vault</span></h3>
+            <p>Tu rincón personal para disfrutar del mejor anime.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 - Diseñado por [Tu Nombre]</p>
+        </div>
     </footer>
 </body>
 </html>
