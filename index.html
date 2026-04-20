@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AnimeVault: Tu catálogo personal para disfrutar de tus animes favoritos con la mejor calidad visual.">
+    <meta name="description" content="AnimeVault: Tu catálogo personal de anime con la mejor calidad.">
     <title>AnimeVault - Inicio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/eb496ab13c.js" crossorigin="anonymous"></script>
@@ -21,6 +21,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#catalogo">Catálogo</a></li>
+                <li><button class="btn-login-nav" id="openLogin"><i class="fas fa-user"></i> Login</button></li>
             </ul>
         </nav>
     </header>
@@ -38,31 +39,58 @@
             <div class="categories">
                 <span class="active">Todos</span>
                 <span>Shonen</span>
-                <span>Isekai</span>
-                <span>Romance</span>
+                <span>Seinen</span>
+                <span>Películas</span>
                 <span>En Emisión</span>
             </div>
 
             <div class="grid-animes">
                 <a href="ver.html" class="anime-link">
                     <div class="anime-card">
+                        <div class="anime-badge">HD</div>
+                        <div class="episode-tag">Ep. 01</div>
                         <img src="/images/Bleach.jpg" alt="Bleach">
                         <div class="card-overlay">
                             <h4>Bleach: TYBW</h4>
-                            <span><i class="fas fa-play-circle"></i> Ver ahora</span>
+                            <div class="card-meta">
+                                <span><i class="fas fa-closed-captioning"></i> Sub</span>
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <span class="play-btn-mini"><i class="fas fa-play"></i> Ver ahora</span>
                         </div>
                     </div>
                 </a>
 
-                <div class="anime-card">
+                <div class="anime-card upcoming">
+                    <div class="anime-badge" style="background: #555;">PROX</div>
                     <img src="/images/anime1.jpg" alt="Próximamente">
                     <div class="card-overlay">
-                        <h4>Próximamente</h4>
+                        <h4>Solo Leveling S2</h4>
+                        <span>Próximamente</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <div class="modal-overlay" id="modalLogin">
+        <div class="modal-content">
+            <button class="close-modal" id="closeLogin">&times;</button>
+            <h3>Bienvenido a <span>AnimeVault</span></h3>
+            <form>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Correo electrónico">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn-download" style="width:100%; border:none; cursor:pointer;">Entrar</button>
+            </form>
+            <p class="modal-footer">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+        </div>
+    </div>
 
     <footer class="main-footer">
         <div class="footer-content">
@@ -75,5 +103,15 @@
             <p class="copyright">&copy; 2026 AnimeVault - Tu App Web Personal</p>
         </div>
     </footer>
+
+    <script>
+        const modal = document.getElementById('modalLogin');
+        const openBtn = document.getElementById('openLogin');
+        const closeBtn = document.getElementById('closeLogin');
+
+        openBtn.onclick = () => modal.classList.add('active');
+        closeBtn.onclick = () => modal.classList.remove('active');
+        window.onclick = (e) => { if(e.target == modal) modal.classList.remove('active'); }
+    </script>
 </body>
 </html>

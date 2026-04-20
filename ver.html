@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Viendo Bleach: TYBW - Episodio 01 en AnimeVault.">
     <title>Reproductor - AnimeVault</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/eb496ab13c.js" crossorigin="anonymous"></script>
@@ -11,24 +10,62 @@
 <body class="player-page">
     <nav>
         <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">Anime<span>Vault</span></a></div>
+        <ul class="nav-links">
+            <li><button class="btn-login-nav" id="openLogin"><i class="fas fa-user"></i> Login</button></li>
+        </ul>
     </nav>
 
     <main class="player-container">
         <div class="video-wrapper">
-            <iframe 
-                src="https://streamtape.com/e/dVD0YdyWyDSkxkA/" 
-                frameborder="0" 
-                allowfullscreen 
-                scrolling="no"
-                title="Reproductor de Bleach TYBW">
-            </iframe>
+            <iframe src="https://streamtape.com/e/dVD0YdyWyDSkxkA/" allowfullscreen scrolling="no"></iframe>
         </div>
 
         <div class="player-info">
-            <h1>Bleach: TYBW - Episodio 01</h1>
-            <p class="server-info"><i class="fas fa-server"></i> Estás viendo el servidor principal de Streamtape.</p>
-            <a href="index.html" class="btn-download"><i class="fas fa-arrow-left"></i> Volver al catálogo</a>
+            <div class="title-flex">
+                <h1>Bleach: TYBW - Episodio 01</h1>
+                <div class="player-actions">
+                    <button class="action-btn"><i class="far fa-heart"></i></button>
+                    <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                </div>
+            </div>
+            
+            <p class="server-info"><i class="fas fa-server"></i> Servidor: <strong>Streamtape (Principal)</strong></p>
+
+            <div class="episode-nav">
+                <a href="#" class="nav-btn disabled"><i class="fas fa-step-backward"></i> Anterior</a>
+                <a href="index.html" class="nav-btn list-btn"><i class="fas fa-th"></i></a>
+                <a href="#" class="nav-btn active">Siguiente <i class="fas fa-step-forward"></i></a>
+            </div>
+
+            <div class="suggested-section">
+                <h3>También te podría gustar</h3>
+                <div class="suggested-grid">
+                    <div class="sugg-card"><img src="/images/anime2.jpg"><span>Naruto Shippuden</span></div>
+                    <div class="sugg-card"><img src="/images/anime3.jpg"><span>One Piece</span></div>
+                    <div class="sugg-card"><img src="/images/anime4.jpg"><span>Jujutsu Kaisen</span></div>
+                </div>
+            </div>
         </div>
     </main>
+
+    <div class="modal-overlay" id="modalLogin">
+        <div class="modal-content">
+            <button class="close-modal" id="closeLogin">&times;</button>
+            <h3>Login <span>AnimeVault</span></h3>
+            <form>
+                <div class="input-group"><i class="fas fa-envelope"></i><input type="email" placeholder="Correo"></div>
+                <div class="input-group"><i class="fas fa-lock"></i><input type="password" placeholder="Password"></div>
+                <button type="submit" class="btn-download" style="width:100%; border:none;">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modalLogin');
+        const openBtn = document.getElementById('openLogin');
+        const closeBtn = document.getElementById('closeLogin');
+        openBtn.onclick = () => modal.classList.add('active');
+        closeBtn.onclick = () => modal.classList.remove('active');
+    </script>
 </body>
 </html>
